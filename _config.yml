@@ -1,53 +1,19 @@
-title: Welcome to Kontrl-Enter
-description: Flexton is a responsive and ultra-minimal theme for Jekyll.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kontrl-enter.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+name: Your New Jekyll Site
+description: Blogging about stuffs
+meta_description: "Your New Jekyll Site, Blogging about stuffs"
 
-# Author
-author-name:    Geonu Ko
-author-image:   icon.png
-author-job:     College Student
-author-email:   rhrjsdn0610@gmail.com
-author-instagram: ko_geonu22
-about-author:   I am College student who want be a Data Scientist. i'll do it cuz it's what i wanna do 
-
-# Social settings
-social-twitter:   
-social-facebook:
-social-github:    Kontrl-Enter
-social-pinterest: 
-social-instagram: ko_geonu22
-social-youtube:
-social-vk:   
-social-linkedin:
-
-# Newsletter
-mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
-
-# Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1
-
-# Comment Section (Disqus)
-disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
-
-# Build settings
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
-plugins:
-  - jekyll-paginate
+highlighter: rouge
+logo: false
+paginate: 15
+baseurl: /kasper
+domain_name: "http://yourblog-domain.com"
+google_analytics: "UA-XXXXXXXX-X"
+plugins: [jekyll-paginate]
 
-paginate: 7
-paginate_path: "/page/:num/"
+# Details for the RSS feed generator
+url: ""
+author: "Your Name"
 
-include:
-  - _pages
-
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Exclude from processing.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - vendor
+# Disqus config
+disqus-shortname: ""

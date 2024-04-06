@@ -1,68 +1,92 @@
 ---
-layout: home
+layout: default
+disqus: false
+archive: false
+post_class: post-template
 ---
-<article class="c-article">
-  <div class="c-article__content">
-    <header class="c-header u-hide u-no-margin-top">
-      <div class="c-header__box">
-        <div class="c-search u-full-width">
-          <div class="c-search__box">
-            <label for="js-search-input" class="u-screen-reader-text">Search for Blog</label>
-            <input type="text" id="js-search-input" class="c-search__text" autocomplete="off" placeholder="Type to search...">
-            <div data-icon='ei-search' data-size='s'></div>
-          </div>
-          <ul id="js-results-container" class="c-search-results-list"></ul>
-        </div>
-      </div>
-    </header>
-    {% if page.image %}
-    <div class="c-article__image o-opacity" style="background-image: url( {{"/images/" | prepend: site.baseurl | append : page.image}} )"></div>
-    {% else %}
-    {% endif %}
-    <div class="c-wrap-content">
-      <header class="c-article__header">
-        <h1 class="c-article__title">{{page.title}}</h1>
-        <div class="c-article__date">
-          <span>{{page.date | date: '%Y, %b %d'}}</span>
-        </div>
-      </header>
-      {{page.content | markdownify}}
-      <div class="c-article__footer u-clearfix">
-        <div class="c-article__tag">
-          {% for tag in page.tags %}
-          <a href="{{site.baseurl}}/tags#{{tag}}">&#35; {{ tag }}</a>
-          {% endfor %}
-        </div>
-        <div class="c-article__share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" title="Share
-          on Twitter" rel="nofollow" target="_blank"><div data-icon='ei-sc-twitter' data-size='s'></div></a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><div data-icon='ei-sc-facebook' data-size='s'></div></a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><div data-icon='ei-sc-google-plus' data-size='s'></div></a>
-        </div>
-      </div>
-      {% include newsletter.html %}
-      <div class="c-recent-post">
-        <h4 class="c-recent__title">You might also enjoy</h4>
-        <div class="c-recent__box">
-        {% for post in site.related_posts limit:4 %}
-        {% if post.image %}
-          <div class="c-recent__item">
-            <a class="c-recent__image" href="{{ post.url }}" style="background-image: url( {{"/images/" | prepend: site.baseurl | append: post.image}})"></a>
-            <div class="c-recent__footer">
-              <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-              <div class="c-recent__date">
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%B %-d, %Y"}}</time>
-              </div>
-            </div>
-          </div>
-        {% else %}
+
+<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
+    <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
+        <a class="back-button icon-arrow-left" href="{{'/' | relative_url }}">Home</a>
+        <a class="subscribe-button icon-feed" href="{{'feed.xml' | relative_url }}">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <section class="post-meta">
+                {% if page.categories.size > 0 %}
+                    {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
+                {% endif %}
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+            </section>
+        </header>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="{{site.url}}">
+                {% if site.logo %}
+                    <img src="{{site.logo}}" alt="{{ site.name }}" />
+                {% else %}
+                    <span class="blog-title">{{ site.name }}</span>
+                {%endif%}
+            </a>
+        </header> -->
+
+        <!-- <span class="post-meta">
+            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+            {% if page.categories.size > 0 %}
+                {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
+            {% endif %}
+        </span> -->
+
+        <!-- <h1 class="post-title">{{ page.title }}</h1> -->
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        {% if page.archive %}
+        <section class="archive">
+            <h5>Archive</h5>
+            <ul>
+                {% for post in site.posts %}
+                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
         {% endif %}
-        {% endfor %}
-        </div>
-      </div> <!-- /.c-recent-post -->
-      {% if site.disqus-identifier %}
-        {% include disqus-comments.html %}
-      {% endif %}
-    </div> <!-- /.c-wrap-content -->
-  </div> <!-- /.c-article__content -->
-</article> <!-- /.c-article-page -->
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            {% if site.author %}
+                <figure class="author-image">
+                    <a class="img" href="{{'/' | relative_url }}" style="background-image: url({{'/assets/images/profile.png' | relative_url}})">
+                    <span class="hidden">{{site.author}}'s Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> {{ site.author }} </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Here goes the author description. You might want to place some links too in here
+                    </p>
+                </section>
+            {% endif %}
+
+            <!-- Share links section -->
+            {% include share.html %}
+
+            <!-- Disqus comments -->
+            {% if page.disqus %}
+                {% include disqus.html %}
+            {% endif %}
+
+        </footer>
+
+    </article>
+
+</main>
