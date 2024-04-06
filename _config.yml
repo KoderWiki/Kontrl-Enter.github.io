@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "https://koderwiki/"
+baseurl: 
 url: "https://koderwiki.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
