@@ -3,7 +3,7 @@ layout: post
 title: Raycasting
 image: 8.jpg
 date: 2024-04-06 11:16:20 +0200
-tags: coding
+tags: [coding,programming]
 categories: game
 ---
 Ray casting(광선 투사) 은 2차원의 맵에서 3차원의 원근감을 구현하기 위한 **렌더링 기법**이다. [WIKIPEDIA](https://en.wikipedia.org/wiki/Ray_casting)에서는 다음과 같이 적혀있다.
