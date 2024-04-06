@@ -1,5 +1,8 @@
-Please note that if you are trying to update **your** website, this is the wrong place to do so. Please carefully follow the Beautiful Jekyll instructions (found at https://github.com/daattali/beautiful-jekyll#readme) and make sure you submit changes to **your** version of the project.
+<!-- Thanks for your PR! -->
+<!-- If the change is not compatible with GitHub page (https://github.com/github/pages-gem) it won't be merged 😢 -->
 
-If your intention is to submit a Pull Request, please describe what your pull request achieves.
+### Description
+<!-- A brief explanation of what the PR is about -->
 
-Thank you!
+### Screenshot
+<!-- Don't forget to provide screenshot if you change the layout of the theme -->
