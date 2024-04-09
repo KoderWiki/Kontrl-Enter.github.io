@@ -5,8 +5,8 @@ url: "https://koderwiki.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Koder Wiki                                    # site's title
 description: "abcd"      # used by search engines
-avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
-favicon: assets/favicon.ico                             # Icon displayed in the tab
+avatar: assets/img/icon.png                         # Empty for no avatar in navbar
+favicon: assets/icon.ico                             # Icon displayed in the tab
 
 # Header and footer text
 header_text: Ko Wiki
