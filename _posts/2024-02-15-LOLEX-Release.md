@@ -20,10 +20,16 @@ categories: LOLEX
 
 ## Main Service
 
-### 1. Match History
+### 1. Match History & Summoner's Info
 
 It is the most basic funtion of this site. Using **RIOT Api**, Showing Summoner's Info, Match data and Graph, etc..
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/6d8d8bf7-526e-42c7-816f-56b00f3d0e48)
+
+### 2. Champion Mastery
+
+Showing the summoner's champion Mastery what you want
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/e9d6f6f0-1dd9-4697-9a3f-55edfb024ff8)
 
 
