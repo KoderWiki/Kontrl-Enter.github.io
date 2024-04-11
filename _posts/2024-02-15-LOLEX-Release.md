@@ -9,21 +9,21 @@ categories: LOLEX
 
 [**LOLEX**](http://ko-web.com/lolex) is my first own web site and **League of Legends's** game data platform. <br>
 
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/9a5bb424-e742-4237-bf63-1cfcea5dda23)
 
 ## **LOLEX**
-![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/5e825442-e85a-4b68-8311-42cb03d4d0eb) <br>
 **Developer** &nbsp;&nbsp;&nbsp;&nbsp; K.Geonu <br>
 **Type of site** &nbsp;&nbsp; Game data platform <br>
 **Written in** &nbsp;&nbsp;&nbsp;&nbsp; Flask(Python) <br>
 **Languages** &nbsp;&nbsp;&nbsp; Korean(한국어) <br>
 **Released** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2024-02-15 <br>
 
+## Main Service
+
+### 1. Match History
+
+It is the most basic funtion of this site. Using **RIOT Api**, Showing Summoner's Info, Match data and Graph, etc..
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/6d8d8bf7-526e-42c7-816f-56b00f3d0e48)
 
 
-
-
-## 주요기능
-
-### 전적 검색
-
-현재까지 만들어진 주요 기능
