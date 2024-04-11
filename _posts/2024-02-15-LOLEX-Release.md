@@ -10,9 +10,10 @@ categories: LOLEX
 [**LOLEX**](http://ko-web.com/lolex) is my first own web site and **League of Legends's** game data platform. <br>
 
 
-<center> # **LOLEX** </center>
+# **<center> LOLEX </center>**
 
-![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/5548d932-6481-4596-831e-e6a52d003209)
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/5e825442-e85a-4b68-8311-42cb03d4d0eb)
+
 
 
 
