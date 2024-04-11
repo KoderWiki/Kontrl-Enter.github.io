@@ -12,11 +12,11 @@ categories: LOLEX
 
 # **LOLEX**
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/5e825442-e85a-4b68-8311-42cb03d4d0eb) <br>
-**Developer**    K.Geonu <br>
-**Type of site**    Game data platform <br>
-**Written in**    Flask(Python) <br>
-**Languages**    Korean(한국어) <br>
-**Released**    2024-02-15 <br>
+**Developer** &nbsp;&nbsp;&nbsp;&nbsp; K.Geonu <br>
+**Type of site** &nbsp;&nbsp; Game data platform <br>
+**Written in** &nbsp;&nbsp;&nbsp;&nbsp; Flask(Python) <br>
+**Languages** &nbsp;&nbsp;&nbsp; Korean(한국어) <br>
+**Released** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2024-02-15 <br>
 
 
 
