@@ -28,7 +28,7 @@ It is the most basic funtion of this site. Using **RIOT Api**, Showing Summoner'
 
 ### 2. Champion Mastery
 
-Showing the summoner's champion Mastery what you want
+It shows the summoner's champion Mastery list you want
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/e9d6f6f0-1dd9-4697-9a3f-55edfb024ff8)
 
