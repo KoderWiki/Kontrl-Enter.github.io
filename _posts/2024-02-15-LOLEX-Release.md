@@ -12,7 +12,7 @@ categories: LOLEX
 
 # **<center> LOLEX </center>**
 
-![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/5e825442-e85a-4b68-8311-42cb03d4d0eb)
+<center> ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/5e825442-e85a-4b68-8311-42cb03d4d0eb)</center>
 
 
 
