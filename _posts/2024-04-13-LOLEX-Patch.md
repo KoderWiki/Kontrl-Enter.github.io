@@ -58,6 +58,10 @@ We've found that Summoner's name is inaccurate. It because, structure of SUMMONE
 
 We solved this problem by receiving another variable.
 
+## [Modifying.1] 변경된 소환사 이름 형식
+
+RIOT api의 SUMMONER-V4에서 /by-name/부분이 4월중으로 사라짐에 따라 더이상 riot tag없이는 검색할 수 없게 만들었습니다.
+
 
 
 
