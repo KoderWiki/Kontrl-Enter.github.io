@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LOLEX Patch Notes
-tags: [Web Develop, League of Legends, LOLEX, 한국어]
+title: LOLEX Patch Notes (ENG)
+tags: [Web Develop, League of Legends, LOLEX, ENG]
 feature-img: "assets/img/0.post/2024-04-13/header2.png"
 thumbnail: "assets/img/0.post/2024-04-13/header2.png"
 categories: LOLEX
@@ -11,7 +11,7 @@ categories: LOLEX
 
 For more information on **LOLEX**, Please click [**here**](https://koderwiki.github.io/lolex/2024/02/15/LOLEX-Release.html)! <br>
 
-## [BUG.1] match-v5 returns meaningless data 
+## [BUG FIXED.1] match-v5 returns meaningless data 
 
 We've found that **some of match historys didn't recieved data properly**. After looking at the cause, we can find out that **the cause was RIOT API**.
 
@@ -42,7 +42,7 @@ For what reason, Riot API sent data that didn't contain anything, so we can't re
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/95ccb3d1-e534-4d59-9dd7-7160071ed63f)
 
-## [BUG.2] Changed structure of SUMMONER-V4
+## [BUG FIXED.2] Changed structure of SUMMONER-V4
 
 We've found that Summoner's name is inaccurate. It because, structure of SUMMONER-V4 is changed.
 
@@ -58,9 +58,51 @@ We've found that Summoner's name is inaccurate. It because, structure of SUMMONE
 
 We solved this problem by receiving another variable.
 
-## [Modifying.1] 변경된 소환사 이름 형식
+## [CHANGES.1] Changes in search format
 
-RIOT api의 SUMMONER-V4에서 /by-name/부분이 4월중으로 사라짐에 따라 더이상 riot tag없이는 검색할 수 없게 만들었습니다.
+**The By SummonerName endpoint** in SUMMONER-V$ is deprecated as part of the transition from Summoner Name to **Riot ID**, so this function will be removed on April 22.
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/94007eb3-6505-4639-a045-6e242b995612)
+
+So out search format also changed! <br>
+From now on, you won't be able to search with out **RIOT TAG**.
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/6c563352-c313-4cf3-9cef-a8d2389037c7)
+
+```javascript
+function searchPost(){
+        let searchValue = document.getElementById("search-input").value.trim();
+        searchValue = searchValue.replace(/#/g,"-")
+        if(searchValue.length > 1){
+          if(searchValue.indexOf('-') != -1){
+            fetch("/lolex/summoner?name="+searchValue+"/")
+            location.href="/lolex/summoner?name="+searchValue+"/";
+          }
+          else{
+            alert('Riot tag가 존재하지않습니다.')
+          } 
+        }
+        else{          
+          alert('소환사 이름이 너무 짧습니다.');
+        }
+
+        
+
+    }
+
+    document.getElementById('search-input').addEventListener('keyup', function(event)
+    {
+        if(event.key=='Enter'){
+            searchPost();
+        }
+    });
+```
+
+
+
+
+
+
 
 
 
