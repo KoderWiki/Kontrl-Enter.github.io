@@ -105,9 +105,9 @@ function searchPost(){
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/874303f5-3827-4e6f-bf40-bf428e5f2c66)
 
-You will now be able to see your Challenges's data!
+You will now be able to see **your Challenges**!
 
-After change
+**After change**
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/3a53cb11-5174-46f7-b9b9-fb296b1c33be)
 
