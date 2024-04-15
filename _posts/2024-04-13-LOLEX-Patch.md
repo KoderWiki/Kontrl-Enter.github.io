@@ -1,13 +1,13 @@
 ---
 layout: post
 title: LOLEX Patch Notes
-tags: [Web Develop, League of Legends, LOLEX]
+tags: [Web Develop, League of Legends, LOLEX, 한국어]
 feature-img: "assets/img/0.post/2024-04-13/header2.png"
 thumbnail: "assets/img/0.post/2024-04-13/header2.png"
 categories: LOLEX
 ---
 
-" This patch is fist patch in [**LOLEX**](http://ko-web.com/lolex). This patch is not added new fuction but **fixed a fatal BUGs**. "
+" This patch is fist patch in [**LOLEX**](http://ko-web.com/lolex). This patch is not added new fuction and deleted some fuctions, also **fixed a fatal BUGs**. "
 
 For more information on **LOLEX**, Please click [**here**](https://koderwiki.github.io/lolex/2024/02/15/LOLEX-Release.html)! <br>
 
