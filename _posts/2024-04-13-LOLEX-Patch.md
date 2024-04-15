@@ -7,11 +7,12 @@ thumbnail: "assets/img/0.post/2024-04-13/header2.png"
 categories: LOLEX
 ---
 
-" This patch is fist patch in [**LOLEX**](http://ko-web.com/lolex). This patch is not added new fuction and deleted some fuctions, also **fixed a fatal BUGs**. "
+Hi, everyone! Director here with some patch notes.<br>
+This patch is fist patch in [**LOLEX**](http://ko-web.com/lolex). This patch is not added new fuction and deleted some fuctions, also **fixed a fatal BUGs**. "
 
 For more information on **LOLEX**, Please click [**here**](https://koderwiki.github.io/lolex/2024/02/15/LOLEX-Release.html)! <br>
 
-## [BUG FIXED.1] match-v5 returns meaningless data 
+## [BUG FIXES.1] match-v5 returns meaningless data 
 
 We've found that **some of match historys didn't recieved data properly**. After looking at the cause, we can find out that **the cause was RIOT API**.
 
@@ -42,7 +43,7 @@ For what reason, Riot API sent data that didn't contain anything, so we can't re
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/95ccb3d1-e534-4d59-9dd7-7160071ed63f)
 
-## [BUG FIXED.2] Changed structure of SUMMONER-V4
+## [BUG FIXES.2] Changed structure of SUMMONER-V4
 
 We've found that Summoner's name is inaccurate. It because, structure of SUMMONER-V4 is changed.
 
@@ -97,6 +98,21 @@ function searchPost(){
         }
     });
 ```
+
+## [UPDATES.2] Delete the Leaderboard
+
+**We've deleted the leaderboard function** being fixed. But we made new function. <br>
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/874303f5-3827-4e6f-bf40-bf428e5f2c66)
+
+You will now be able to see your Challenges's data!
+
+After change
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/3a53cb11-5174-46f7-b9b9-fb296b1c33be)
+
+
+
 
 
 
