@@ -34,7 +34,7 @@ categories: CSE, AI
 
 **시그모이드 함수**(Sigmoid Fuction)은 로짓(Logit)의 역변환이며, **로지스틱 함수**(Logistic Fuction)와 유사한 개념이다.
 
-![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/9bc30976-b0d6-45e5-97cd-df22589dfbd8)
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/6ed1810e-05e5-403e-8346-24a752b86cfe)
 
 ![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/ff672403-6823-44d0-90bc-70af771b03a2)
 
@@ -51,7 +51,32 @@ categories: CSE, AI
 
 > - 시그모이드 함수는 음수 값을 0에 가깝게 표현하기 때문에 입력 값이 최종 계층(Layer)에서 미치는 영향이 적어지는 **기울기 소실 문제**(Vanishing Gradient Problem)가 발생한다.
 
-시그모이드 도함수 그래프에서 미분 계수를 보면 최대 값이 0.25이다. 딥러닝에서 학습을 위해 **역전파**(Back-propagation)을 계산하는 과정에서 미분 값을 곱하는 과정이 포함되는데, 시그모이드 함수의 경우 은닉층의 깊이가 깊으면 오차율을 계산하기 어렵다는 문제가 발생해서, 기울기 소실 문제가 발생한다. 다시 말해 x의 절대값이 커질수록 기울기 역전파시 미분 값이 소실 될 가능성이 큰 단점이 있다.
+시그모이드 도함수 그래프에서 미분 계수를 보면 최대 값이 0.25이다. 딥러닝에서 학습을 위해 **역전파**(Back-propagation)을 계산하는 과정에서 미분 값을 곱하는 과정이 포함되는데, 시그모이드 함수의 경우 은닉층의 깊이가 깊으면 오차율을 계산하기 어렵다는 문제가 발생해서, 기울기 소실 문제가 발생한다. <br>
+다시 말해 **x의 절대값이 커질수록 기울기 역전파시 미분 값이 소실 될 가능성이 큰 단점**이 있다.
+
+> - 시그모이드 함수는 중심이 0이 아니라는 점때문에 학습이 느려진다.
+
+#### 하이퍼볼릭 탄젠트(Tanh, Hyperbolic tangent) 함수
+
+**하이퍼볼릭 탄젠트**(tanh, Hyperbolic tangent) 함수는 쌍곡선 함수 중 하나로 다음과 같이 표현된다.
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/0cce376c-8ace-40ed-98b6-a80f44adfcb7)
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/9f274099-719e-4999-b6bc-4b3ceb823b92)
+
+**하이퍼볼릭 탄젠트 함수 특징**
+
+> - 하이퍼볼릭 탄젠트 함수의 치역은 (-1,1), 즉, −1<σ(x)<1
+> - 0을 중심으로 함
+
+하이퍼볼릭 탄젠트 함수는 중심점을 0으로 옮겨 시그모이드 함수가 갖오있던 최적화 과정에서 느려지는 문제를 해결했다.
+
+**하이퍼볼릭 탄젠트 함수 한계**
+
+> - **기울기 소실 문제** 발생
+
+
+
 
 
 
@@ -68,7 +93,8 @@ categories: CSE, AI
 [Activation function | Wikipedia](https://en.wikipedia.org/wiki/Activation_function)<br>
 [활성화 함수: 정의와 중류, 비선형 함수를 사용해야 하는 이유](https://kevinitcoding.tistory.com/entry/%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%A8%EC%88%98-%EC%A0%95%EC%9D%98%EC%99%80-%EC%A2%85%EB%A5%98-%EB%B9%84%EC%84%A0%ED%98%95-%ED%95%A8%EC%88%98%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0) <br>
 [딥러닝 이론, 5. 활성화 함수](https://bbangko.tistory.com/5) <br>
-[딥러닝 - 활성화 함수](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=handuelly&logNo=221824080339)
+[딥러닝 - 활성화 함수](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=handuelly&logNo=221824080339)<br>
+[활성화 함수 개념 및 종류](https://heytech.tistory.com/360)
 
 
 
