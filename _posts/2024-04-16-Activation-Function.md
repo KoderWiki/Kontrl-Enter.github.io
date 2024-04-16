@@ -7,4 +7,4 @@ thumbnail: "assets/img/0.post/2024-04-16/header.png"
 categories: CSE, AI
 ---
 
-.
+&emsp;**활성화 함수**
