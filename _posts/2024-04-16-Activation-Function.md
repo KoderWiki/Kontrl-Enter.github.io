@@ -26,5 +26,49 @@ categories: CSE, AI
 
 2개의 계층을 쌓아봤지만, X에 곱해지는 항들은 W로 치환 가능하고, 입력과 무관한 상수들은 전체를 B로 치환 가능하기 때문에 WX + B라는 **동일한 결과**를 낸다.
 
+이처럼 활성화 함수로 선형 함수를 이용하면 여러 층으로 구성하는 이점을 살릴수 없기 때문에 층을 쌓기 위에서는 비선형 함수를 사용해야 한다. 다른 이유로는 XOR gate같은 그래프를 구분할수 없다는 점과 활성화 함수가 비선형일때, 2계층을 가진 신경망은 보편 함수의 근사치(Universal function approximator)임을 증명할수 있다는 점(보편근사정리, Universal approximation theorem) 등이 있다.
+
+## 비선형함수 (Non-Linear Function)
+
+#### 시그모이드 함수 (Sigmoid Fuction)
+
+**시그모이드 함수**(Sigmoid Fuction)은 로짓(Logit)의 역변환이며, **로지스틱 함수**(Logistic Fuction)와 유사한 개념이다.
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/9bc30976-b0d6-45e5-97cd-df22589dfbd8)
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/ff672403-6823-44d0-90bc-70af771b03a2)
+
+**시그모이드 함수 특징**
+
+> - 시그모이드 함수의 치역은 (0,1), 즉, 0<σ(x)<1
+> - 모든 입력값에 대해 출력값이 실숫값으로 정의(Soft Decision)
+
+모든 실수 값을 0보다 크고 1보다 작은 미분 가능한 수로 변환하는 특징을 갖기 때문에, Logistic Classification과 같은 분류 문제에서 자주 사용 된다. 또한 sigmoid()의 return값이 확률 값이기 때문에 결과를 확률로 해석할 때 유용하다.
+
+> - 출력이 0 ~ 1 사이로 확률 표현 가능(Binary Classification)
+
+**시그모이드 함수 한계**
+
+> - 시그모이드 함수는 음수 값을 0에 가깝게 표현하기 때문에 입력 값이 최종 계층(Layer)에서 미치는 영향이 적어지는 **기울기 소실 문제**(Vanishing Gradient Problem)가 발생한다.
+
+시그모이드 도함수 그래프에서 미분 계수를 보면 최대 값이 0.25이다. 딥러닝에서 학습을 위해 **역전파**(Back-propagation)을 계산하는 과정에서 미분 값을 곱하는 과정이 포함되는데, 시그모이드 함수의 경우 은닉층의 깊이가 깊으면 오차율을 계산하기 어렵다는 문제가 발생해서, 기울기 소실 문제가 발생한다. 다시 말해 x의 절대값이 커질수록 기울기 역전파시 미분 값이 소실 될 가능성이 큰 단점이 있다.
+
+
+
+
+
+
+
+
+
+
+
+
+## Reference
+[Activation function | Wikipedia](https://en.wikipedia.org/wiki/Activation_function)<br>
+[활성화 함수: 정의와 중류, 비선형 함수를 사용해야 하는 이유](https://kevinitcoding.tistory.com/entry/%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%A8%EC%88%98-%EC%A0%95%EC%9D%98%EC%99%80-%EC%A2%85%EB%A5%98-%EB%B9%84%EC%84%A0%ED%98%95-%ED%95%A8%EC%88%98%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0) <br>
+[딥러닝 이론, 5. 활성화 함수](https://bbangko.tistory.com/5) <br>
+[딥러닝 - 활성화 함수](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=handuelly&logNo=221824080339)
+
 
 
