@@ -75,6 +75,30 @@ categories: CSE, AI
 
 > - **기울기 소실 문제** 발생
 
+## ReLU(Rectrified Linear Unit) 함수
+
+**ReLU(Rectified Linear Unit, 경사) 함수**는 가장 많이 사용되는 활성화 함수중 하나로, y=x인 **선형 함수**(Linear Fuction)가 **입력값 0 이하에서 부터 정류**(rectified)된 함수다.
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/e54c6241-43ac-4b6e-94d8-234c9b0fa1ba)
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/ed74743f-a04b-468f-928d-230ed8b270a7)
+
+**ReLu 함수 특징**
+
+> - 시그모이드, 하이퍼볼릭탄젠트 함수의 기울기 소실 문제 해결
+
+기울기(미분값)이 0또는 1의 값을 가지기 때문에 시그모이드 함수에서 나타나는 기울기 소실 문제가 발생하지 않는다. 엄연히 비선형(Non-Linear)함수이기 때문에 계층을 깊게 쌓을수 있다.
+
+> - 구현이 단순하고 연산이 필요없어 연산 속도 빠름
+
+exp()함수를 실행하지 않고 임계값(양수/음수 여부)만 활용하기 때문에, 시그모이드 함수나 하이퍼볼릭탄젠트 함수보다 6배정도 빠르게 학습을 할수 있다.
+
+**ReLU 함수 한계**
+
+> - 입력값이 음수일 경우 학습이 안됨(**Dying ReLU**)
+
+입력값이 음수일 경우 출력값과 미분값을 모두 0으로 만들기 때문에 뉴런의 출력물이 0보다 작아서 활성화가 안되며 오차역전파도 전달이 안된다.
+
 
 
 
