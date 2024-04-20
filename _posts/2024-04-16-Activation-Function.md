@@ -75,7 +75,7 @@ categories: CSE, AI
 
 > - **기울기 소실 문제** 발생
 
-## ReLU(Rectrified Linear Unit) 함수
+#### ReLU(Rectrified Linear Unit) 함수
 
 **ReLU(Rectified Linear Unit, 경사) 함수**는 가장 많이 사용되는 활성화 함수중 하나로, y=x인 **선형 함수**(Linear Fuction)가 **입력값 0 이하에서 부터 정류**(rectified)된 함수다.
 
@@ -98,6 +98,22 @@ exp()함수를 실행하지 않고 임계값(양수/음수 여부)만 활용하�
 > - 입력값이 음수일 경우 학습이 안됨(**Dying ReLU**)
 
 입력값이 음수일 경우 출력값과 미분값을 모두 0으로 만들기 때문에 뉴런의 출력물이 0보다 작아서 활성화가 안되며 오차 역전파(Back-propagation)도 전달이 안된다.
+
+#### Leaky ReLU 함수
+
+**Leaky ReLU 함수**는 ReLU 함수가 갖는 **Dying ReLU**현상을 해결하기 위해 나온 변형된 ReLu 함수중 하나이다.
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/8e870fea-c35a-447f-817c-38a01942f07a)
+
+![image](https://github.com/KoderWiki/koderwiki.github.io/assets/153072257/d1bca237-fb78-4d5a-a67f-a47d77b7c161)
+
+**Leaky ReLU 함수 특징**
+
+> - 입력값이 음수일때 출력값을 0이 아닌 매우 작은 값을 출력하여 Dying ReLU현상을 방지함
+
+입력값이 음수일때 0이 아닌 0.01, 0.001과 같은 매우 작은 값을 출력함으로써 입력값이 음수라도 기울기가 0이되는 현상을 방지해 Dying ReLU 현상을 방지한다.
+
+
 
 
 
